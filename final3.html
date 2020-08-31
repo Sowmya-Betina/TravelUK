@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href=".\some4.css"/>
+        
+        <script class="one">
+            function startTime() {
+              var today = new Date();
+              var h = today.getHours();
+              var m = today.getMinutes();
+              var s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =
+              h + ":" + m + ":" + s;
+              var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+              return i;
+            }
+            </script>
+        
+        <title>Travel UK</title>
+    </head>
+    <body onload="startTime()">
+
+        <div id="txt"></div>
+        
+         <header>
+            <h1>Travel UK</h1>
+         </header>
+         <a href=".\form3.html" class ="fun">Contact us</a>
+         <div>
+            <a href=".\cambridge2.html">CAMBRIDGE</a>
+            <img src="F:\cambridge.jpg">
+            <img src="F:\Edinburgh.jfif">
+            <a href=".\edinburgh2.html">EDINBURGH<br></a>
+            <a href=".\glasgow2.html">GLASGOW</a>
+            <img src="F:\glasgow.jfif">
+            <img src="F:\london.jpg">
+            <a href=".\london2.html">LONDON</a>
+            
+        </div>
+    </body>
+</html>
